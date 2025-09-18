@@ -1,4 +1,4 @@
-\documentclass[manuscript,screen,noacm]{acmart}
+\documentclass[manuscript,screen,nonacm]{acmart}
 
 % pkgs basic
 \usepackage[T1]{fontenc}
@@ -64,6 +64,24 @@
 \section{Method}
 \label{sec:method}
 %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!ht]
+    \centering
+    \captionbox{square\label{fig:square}}
+    [.4\textwidth]{
+        \begin{tikzpicture}
+        \draw[blue, very thick] (0,0) rectangle (3,2);
+        \end{tikzpicture}
+    }
+    \captionbox{triangle\label{fig:triangle}}
+    [.4\textwidth]{
+        \begin{tikzpicture}
+        \draw[orange, ultra thick] (4,0) -- (6,0) -- (5.7,2) -- cycle;
+        \end{tikzpicture}
+    }
+    \caption{Two shapes}\label{fig:shapes}
+    \Description{}
+\end{figure}
 
 \lipsum[1-2]\cite{Heinz15}, \cite{Fear05}
 
