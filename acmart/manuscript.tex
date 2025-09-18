@@ -40,7 +40,7 @@
 \renewcommand{\shortauthors}{Guedes, A.L.G.}
 
 \begin{abstract}
-\lipsum[1-2]
+\lipsum[1]
 \end{abstract}
 \keywords{keyword1, keyword2}
 
@@ -51,14 +51,47 @@
 \label{sec:introduction}
 %%%%%%%%%%%%%%%%%%%%
 
-\lipsum[1-2]\cite{TeXFAQ}, \cite{Downes04:amsart}
+\begin{figure}[ht!]
+\centering
+\begin{tikzpicture}[node distance=3mm,>=stealth,thick,scale=0.92, every node/.style={scale=0.92}]
+  \tikzstyle{stage}=[rectangle, rounded corners, draw, align=flush left, minimum width=0.3\linewidth, inner sep=1mm]
+  % Workflow nodes
+  \node[stage, fill=gray!10] (pre) {\textbf{Introduction}\\
+    -- \lipsum[1][1]\\
+    -- \lipsum[1][1]
+  };
+  \node[stage, fill=gray!10, below=of pre] (prod) {\textbf{Related Work}\\
+    -- \lipsum[1][1]\\
+    -- \lipsum[1][1]
+  };
+  \node[stage, fill=gray!10, below=of prod] (post) {\textbf{Method}\\
+    -- \lipsum[1][1]\\
+    -- \lipsum[1][1]
+  };
+  \node[stage, fill=gray!10, below=of post] (dist) {\textbf{Final Remarks}\\
+    -- \lipsum[1][1]\\
+    -- \lipsum[1][1]
+  };
+  % Arrows between stages
+  \draw[->] (pre.south) -- (prod.north);
+  \draw[->] (prod.south) -- (post.north);
+  \draw[->] (post.south) -- (dist.north);
+  % Big surrounding box
+  \node[draw, thick, rounded corners, fit=(pre)(prod)(post)(dist), inner sep=6mm, label={\textbf{Paper Structure}}] {};
+\end{tikzpicture}
+\caption{Structure.}
+\Description{}
+\label{fig:structure}
+\end{figure}
+
+\lipsum[1]\cite{TeXFAQ}, \cite{Downes04:amsart}
 
 %%%%%%%%%%%%%%%%%%%%
 \section{Related Work}
 \label{sec:related}
 %%%%%%%%%%%%%%%%%%%%
 
-\lipsum[1-2]\cite{Fiorio15}, \cite{Brito09}
+\lipsum[1]\cite{Fiorio15}, \cite{Brito09}
 
 %%%%%%%%%%%%%%%%%%%%
 \section{Method}
@@ -83,14 +116,14 @@
     \Description{}
 \end{figure}
 
-\lipsum[1-2]\cite{Heinz15}, \cite{Fear05}
+\lipsum[1]\cite{Heinz15}, \cite{Fear05}
 
 %%%%%%%%%%%%%%%%%%%%
 \section{Final Remarks}
 \label{sec:remarks}
 %%%%%%%%%%%%%%%%%%%%
 
-\lipsum[1-2]\cite{Carlisle04:Textcase,Braams22:Babel}
+\lipsum[1]\cite{Carlisle04:Textcase,Braams22:Babel}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
