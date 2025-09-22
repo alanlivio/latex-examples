@@ -1,10 +1,7 @@
 \documentclass[manuscript,screen,nonacm]{acmart}
 
-% pkgs basic
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{setspace}
-\usepackage{blindtext} % blind text
+% -- basic config
+\usepackage{array} % support p{width}
 \usepackage{tabularx} % flexible column X
 \usepackage{booktabs} % \toprule, \midrule, \bottomrule
 \usepackage{listings} % code listing
@@ -14,13 +11,11 @@
 \usepackage{acronym} % \newacro and \ac
 \usepackage{lipsum}
 \usepackage{url} % \url
-\newcommand{\de}[0]{$^\circ$~}
 \newcommand{\ie}[0]{\textit{i.e.},~}
 \newcommand{\eg}[0]{\textit{e.g.},~}
-\newcommand{\cf}[0]{\textit{c.f.},~}
 \newcommand{\etal}[0]{\textit{et al.}~}
 
-% pkgs tikz
+% -- basic tikz
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, positioning, shapes, fit}
 
